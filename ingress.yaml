@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: deel-ingress
 spec:
+  ingressClassName: nginx
   rules:
   - host: reverseip.arca-payments.network
     http:
