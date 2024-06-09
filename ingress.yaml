@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: deel-ingress
+spec:
+  rules:
+  - host: reverseip.arca-payments.network
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: deel-assessment-svc
+            port:
+              number: 80
